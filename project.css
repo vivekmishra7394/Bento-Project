@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* background: linear-gradient(to bottom, #000 0%, white 85%); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #343434;
+    color: #fff;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    display: grid;
+    place-content: center;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    text-decoration: none;
+    width: 5rem;
+    height: 2rem;
+    color: white !important;
+    border-radius: 1.5rem;
+    background-color: #1aff00;
+  }
+  .btn:hover {
+    color: rgb(13, 255, 0);
+    border-radius: 1.5rem;
+    background-color: #000000;
+  }
+  h1,
+  h2,
+  h3 {
+    transform: translateY(0);
+    background-color: #1aff00;
+    background: linear-gradient(to right, #1aff00 10%, #a2ff90 70%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* margin: auto; */
+  }
+  
+  i {
+    font-size: 2rem;
+    margin: auto;
+  }
+  i:hover {
+    transform: scale(1.8);
+    transition: all 300ms ease-in-out;
+  }
+  .grid-container {
+    max-width: 900px;
+    margin: 1rem;
+    display: grid;
+    height: 100vh;
+    /* grid-auto-columns: repeat (auto-fit, minmax(400px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.6fr 1.6fr 1.1fr 1.6fr 1.6fr 1.6fr 1.6fr;
+    gap: 0.6 rem;
+    align-items: center;
+    position: relative;
+    grid-template-areas:
+      "box1 box1 box2 box2 box2 box2"
+      "box1 box1 box6 box6 box3 box3"
+      "box4 box4 box6 box6 box3 box3"
+      "box7 box7 box8 box8 box5 box9"
+      "box7 box7 box8 box8 box5 box9"
+      "box7 box7 box8 box8 box5 box9";
+  
+    /* "box1  box1  box1  box2  box2  box2  box2 box3  box3"
+      "box4  box5  box5  box5  box6  box6 box7 box7  box7"
+      "box8  box8  box8  box8  box8  box9  box9 box10 box10"; */
+  }
+  
+  .grid-item {
+    background-color: #555;
+    margin: 0.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.45rem;
+    /* overflow: auto; */
+    transition: all 200ms ease;
+  }
+  
+  .grid-item:hover {
+    cursor: pointer;
+    background-color: #555;
+    outline: 1px solid #fff;
+    transition: 0.3s ease;
+    transform: scale(1.02);
+    box-shadow: 0px 7px 8px rgba(34, 255, 0, 0.5);
+  }
+  
+  .grid-item-1 {
+    grid-area: box1;
+    background-color: #000;
+  }
+  .grid-item-2 {
+    grid-area: box2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    grid-auto-rows: repeat (auto-fit);
+  }
+  .grid-item-3 {
+    grid-area: box3;
+    color: black !important;
+    background-color: #25dc00;
+    background: linear-gradient(to right, #1aff00 10%, #a5ff93 70%);
+  }
+  .grid-item-3 h1 {
+    color: black !important;
+  }
+  .grid-item-4 {
+    grid-area: box4;
+  }
+  .grid-item-5 {
+    grid-area: box5;
+    background-color: black;
+  }
+  .grid-item-5 ol:hover {
+    transform: scale(1.8);
+    transition: all 700ms ease-in;
+    transition: all 700ms ease-out;
+  }
+  
+  .grid-item-6 {
+    grid-area: box6;
+    background: transparent;
+  }
+  .grid-item-6 img {
+    height: 12rem;
+    width: 12rem;
+  }
+  
+  .grid-item-6 :hover{
+    border: none;
+    background: transparent !important;
+  }
+  .grid-item-6 img:hover {
+    scale: 1.15;
+  }
+  
+  .grid-item-7 {
+    margin: 0px !important;
+    padding: 0px !important;
+    grid-area: box7;
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    overflow: hidden;
+    /* transform: translate(-50%,-50%); */
+    /* top: 50%;
+    left: 50%; */
+  
+    /* background-image: url("https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.webp?s=1024x1024&w=is&k=20&c=ffZ9DMUWJuqSOgFds4ltM_71PRVfBBu5vhPznWewDOM=");
+    background-size: contain;
+    background-repeat: no-repeat; */
+  }
+  .wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    animation: slide 14s infinite;
+  }
+  .wrappers h1 {
+    color: black !important;
+  }
+  
+  .wrap {
+    display: flex;
+    padding: 0rem;
+    height: 12rem;
+    width: auto;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(0);
+    }
+    30% {
+      transform: translate(-100%);
+    }
+    50% {
+      transform: translate(-100%);
+    }
+    55% {
+      transform: translate(-200%);
+    }
+    70% {
+      transform: translate(-200%);
+    }
+    80% {
+      transform: translate(-300%);
+    }
+    100% {
+      transform: translate(-300%);
+    }
+  }
+  .grid-item-7 img {
+    opacity: 1.7;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    /* padding-right: 3rem; */
+    /* border: 1px solid #444; */
+    object-fit: cover;
+  }
+  .grid-item-8 p {
+    color: rgb(0, 0, 0);
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* background: rgba(0,0,0,0.6); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-wrap: nowrap;
+    opacity: 1;
+    /* transition: 0.6s ;
+    animation: typing 1s; */
+  }
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  .content h2 {
+    font-size: 2rem;
+  }
+  .grid-item-8 {
+    grid-area: box8;
+    color: black;
+    background: linear-gradient(to right, #1aff00 10%, #a5ff93 70%);
+  }
+  .grid-item-8 h3 {
+    color: black !important;
+  }
+  .grid-item-9 {
+    align-items: center;
+    grid-area: box9;
+    background-color: black;
+  }
+  
+  /* @media (max-width: 768px) {
+    .grid-container {
+      grid-template-areas:
+        "box1 box1 box6 box6"
+        "box1 box1 box6 box6";
+      transition: all 200ms ease;
+    }
+  }
+  @media (max-width: 540px) {
+    .grid-container {
+      grid-template-areas:
+        "box1  box2"
+        "box4  box4 "
+        "box10  box10"
+        "box7  box7"
+        "box7  box7"
+        "box7  box7"
+        "box12  box12"
+        "box13  box13"
+        "box14  box14"
+        "box8  box9"
+        "box3  box11"
+        "box5  box5";
+      transition: all 200ms ease;
+    } */
+  
+    @media only screen and (max-width: 340px) {
+      .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2fr 0.2fr 1.2fr 1.2fr 1.2fr 1fr ;
+        grid-template-areas: "box1" "box1"
+        "box1" "box1"
+        "box2" "box2" 
+        "box2" "box2"
+        "box3" "box3"
+        "box3" "box3"
+        "box4" "box4"
+        "box4" "box4"
+        "box5" "box5"
+        "box5" "box5"
+        "box6" "box6"
+        "box6" "box6"
+        "box7" "box7"
+        "box7" "box7"
+        "box8" "box8"
+        "box8" "box8"
+        "box9" "box9"
+        "box9" "box9";
+      }
+    }
+  
+    /* @media (max-width: 355px) {
+      .grid-container {
+        grid-template-areas:
+          "box1  box1"
+          "box2  box2 "
+          "box3  box3"
+          "box4  box4"
+          "box5  box5"
+          "box6  box6"
+          "box12  box12"
+          "box13  box13"
+          "box14  box14"
+          "box9  box9"
+          "box3  box11"
+          "box5  box5";
+        transition: all 200ms ease;
+      }
+    }
+    .grid-item {
+      padding: 0.75rem 1rem;
+    } */
+  
+    .grid-item-7 .background {
+      height: 250px;
+    }
